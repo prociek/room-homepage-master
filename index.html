@@ -1,59 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Room homepage</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  Home
-  Shop
-  About
-  Contact
-
-  Discover innovative ways to decorate
-
-  We provide unmatched quality, comfort, and style for property owners across the country. 
-  Our experts combine form and function in bringing your vision to life. Create a room in your 
-  own style with our collection and make your property a reflection of you and what you love.
-
-  Shop now
-
-  We are available all across the globe
-
-  With stores all over the world, it's easy for you to find furniture for your home or place of business. 
-  Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
-  store locator. Any questions? Don't hesitate to contact us today.
-
-  Shop now
-
-  Manufactured with the best materials
-
-  Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
-  to ensure that every product is made as perfect and as consistent as possible. With three decades of 
-  experience in this industry, we understand what customers want for their home and office.
-
-  Shop now
-
-  About our furniture
-
-  Our multifunctional collection blends design and function to suit your individual taste.
-  Make each room unique, or pick a cohesive theme that best express your interests and what
-  inspires you. Find the furniture pieces you need, from traditional to contemporary styles
-  or anything in between. Product specialists are available to help you create your dream space.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Room homepage</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <button class="header__button header__button--hamburger">
+        <img
+          class="header__icon"
+          src="./images/icon-hamburger.svg"
+          alt="open nav icon"
+        />
+      </button>
+      <nav class="header__nav">
+        <button class="header__button header__button--close">
+          <img
+            class="header__icon"
+            src="./images/icon-close.svg"
+            alt="close nav icon"
+          />
+        </button>
+        <ul class="haeder__nav-list">
+          <li class="header__nav-item"><a href="#home">home</a></li>
+          <li class="header__nav-item"><a href="#shop">shop</a></li>
+          <li class="header__nav-item"><a href="#about">about</a></li>
+          <li class="header__nav-item"><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__logo-box">
+        <img src="./images/logo.svg" alt="" class="header__logo" />
+      </div>
+    </header>
+    <main>
+      <section class="shop">
+        <ul class="carousel">
+          <li class="carouseel__item">
+            <img
+              src="./images/mobile-image-hero-1.jpg"
+              alt="disign table and chairs"
+              class="carousel__img"
+            />
+            <article class="shop">
+              <h2 class="shop__heading">
+                Discover innovative ways to decorate
+              </h2>
+              <p class="shop__text">
+                We provide unmatched quality, comfort, and style for property
+                owners across the country. Our experts combine form and function
+                in bringing your vision to life. Create a room in your own style
+                with our collection and make your property a reflection of you
+                and what you love.
+              </p>
+              <a href="" class="shop__button"
+                >Shop now <img src="./images/icon-arrow.svg" alt="icon arrow"
+              /></a>
+            </article>
+          </li>
+          <li class="carouseel__item">
+            <img
+              src="./images/mobile-image-hero-2.jpg"
+              alt="design colorful chairs"
+              class="carousel__img"
+            />
+            <article class="shop">
+              <h2 class="shop__heading">
+                We are available all across the globe
+              </h2>
+              <p class="shop__text">
+                With stores all over the world, it's easy for you to find
+                furniture for your home or place of business. Locally, we’re in
+                most major cities throughout the country. Find the branch
+                nearest you using our store locator. Any questions? Don't
+                hesitate to contact us today.
+              </p>
+              <a href="" class="shop__button"
+                >Shop now <img src="./images/icon-arrow.svg" alt="icon arrow"
+              /></a>
+            </article>
+          </li>
+          <li class="carouseel__item">
+            <img
+              src="./images/mobile-image-hero-3.jpg"
+              alt="deisign black chair"
+              class="carousel__img"
+            />
+            <article class="shop">
+              <h2 class="shop__heading">
+                Manufactured with the best materials
+              </h2>
+              <p class="shop__text">
+                Our modern furniture store provide a high level of quality. Our
+                company has invested in advanced technology to ensure that every
+                product is made as perfect and as consistent as possible. With
+                three decades of experience in this industry, we understand what
+                customers want for their home and office.
+              </p>
+              <a href="" class="shop__button"
+                >Shop now <img src="./images/icon-arrow.svg" alt="icon arrow"
+              /></a>
+            </article>
+          </li>
+        </ul>
+        <button class="carousel__button carousel__button--left">
+          <img
+            src="./images/icon-angle-left.svg"
+            alt="icon angle left"
+          /></button
+        ><button class="carousel__button carousel__button--right">
+          <img src="./images/icon-angle-right.svg" alt="icon angle right" />
+        </button>
+      </section>
+      <div class="image">
+        <img src="./images/image-about-dark.jpg" alt="disign furniture" />
+      </div>
+      <section class="about">
+        <h3 class="about__heading">About our furniture</h3>
+        <p class="about__text">
+          Our multifunctional collection blends design and function to suit your
+          individual taste. Make each room unique, or pick a cohesive theme that
+          best express your interests and what inspires you. Find the furniture
+          pieces you need, from traditional to contemporary styles or anything
+          in between. Product specialists are available to help you create your
+          dream space.
+        </p>
+      </section>
+      <div class="image image--right">
+        <img src="./images/image-about-light.jpg" alt="disign chair" />
+      </div>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
 </html>

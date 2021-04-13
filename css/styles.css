@@ -1,0 +1,41 @@
+@font-face {
+  font-family: Spartan;
+  src: url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap");
+}
+
+/* Variables */
+:root {
+  --Primary-Dark-Gray: hsl(0, 0%, 63%);
+  --Black: hsl(0, 0%, 0%);
+  --White: hsl(0, 0%, 100%);
+  --Primary-Very-Dark-Gray: hsl(0, 0%, 27%);
+}
+
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  font-family: Spartan, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
