@@ -10,17 +10,23 @@
       href="./images/favicon-32x32.png"
     />
     <title>Frontend Mentor | Room homepage</title>
+    <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <header class="header">
-      <button class="header__button header__button--hamburger">
-        <img
-          class="header__icon"
-          src="./images/icon-hamburger.svg"
-          alt="open nav icon"
-        />
-      </button>
+      <div class="header__group">
+        <button class="header__button header__button--hamburger">
+          <img
+            class="header__icon"
+            src="./images/icon-hamburger.svg"
+            alt="open nav icon"
+          />
+        </button>
+        <div class="header__logo-box">
+          <img src="./images/logo.svg" alt="logo room" class="header__logo" />
+        </div>
+      </div>
       <nav class="header__nav">
         <button class="header__button header__button--close">
           <img
@@ -36,20 +42,17 @@
           <li class="header__nav-item"><a href="#contact">contact</a></li>
         </ul>
       </nav>
-      <div class="header__logo-box">
-        <img src="./images/logo.svg" alt="" class="header__logo" />
-      </div>
     </header>
     <main>
       <section class="shop">
         <ul class="carousel">
-          <li class="carouseel__item">
+          <li class="carousel__item">
             <img
               src="./images/mobile-image-hero-1.jpg"
               alt="disign table and chairs"
               class="carousel__img"
             />
-            <article class="shop">
+            <article class="carousel__shop">
               <h2 class="shop__heading">
                 Discover innovative ways to decorate
               </h2>
@@ -65,13 +68,13 @@
               /></a>
             </article>
           </li>
-          <li class="carouseel__item">
+          <li class="carousel__item">
             <img
               src="./images/mobile-image-hero-2.jpg"
               alt="design colorful chairs"
               class="carousel__img"
             />
-            <article class="shop">
+            <article class="carousel__shop">
               <h2 class="shop__heading">
                 We are available all across the globe
               </h2>
@@ -87,13 +90,13 @@
               /></a>
             </article>
           </li>
-          <li class="carouseel__item">
+          <li class="carousel__item">
             <img
               src="./images/mobile-image-hero-3.jpg"
               alt="deisign black chair"
               class="carousel__img"
             />
-            <article class="shop">
+            <article class="carousel__shop">
               <h2 class="shop__heading">
                 Manufactured with the best materials
               </h2>
@@ -143,5 +146,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
+    <script src="./js/main.js"></script>
   </body>
 </html>
