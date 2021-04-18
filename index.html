@@ -10,10 +10,11 @@
       href="./images/favicon-32x32.png"
     />
     <title>Frontend Mentor | Room homepage</title>
-    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <div class="overlay"></div>
     <header class="header">
       <div class="header__group">
         <button class="header__button header__button--hamburger">
@@ -47,11 +48,16 @@
       <section class="shop">
         <ul class="carousel">
           <li class="carousel__item">
-            <img
-              src="./images/mobile-image-hero-1.jpg"
-              alt="disign table and chairs"
-              class="carousel__img"
-            />
+            <picture class="carousel__img">
+              <source
+                srcset="images/desktop-image-hero-1.jpg"
+                media="(min-width: 1024px)"
+              />
+              <img
+                src="./images/mobile-image-hero-1.jpg"
+                alt="disign table and chairs"
+              />
+            </picture>
             <article class="carousel__shop">
               <h2 class="shop__heading">
                 Discover innovative ways to decorate
@@ -69,11 +75,16 @@
             </article>
           </li>
           <li class="carousel__item">
-            <img
-              src="./images/mobile-image-hero-2.jpg"
-              alt="design colorful chairs"
-              class="carousel__img"
-            />
+            <picture class="carousel__img">
+              <source
+                srcset="./images/desktop-image-hero-2.jpg"
+                media="(min-width: 1024px)"
+              />
+              <img
+                src="./images/mobile-image-hero-2.jpg"
+                alt="design colorful chairs"
+              />
+            </picture>
             <article class="carousel__shop">
               <h2 class="shop__heading">
                 We are available all across the globe
@@ -91,11 +102,16 @@
             </article>
           </li>
           <li class="carousel__item">
-            <img
-              src="./images/mobile-image-hero-3.jpg"
-              alt="deisign black chair"
-              class="carousel__img"
-            />
+            <picture class="carousel__img">
+              <source
+                srcset="./images/desktop-image-hero-3.jpg"
+                media="(min-width: 1024px)"
+              />
+              <img
+                src="./images/mobile-image-hero-3.jpg"
+                alt="deisign black chair"
+              />
+            </picture>
             <article class="carousel__shop">
               <h2 class="shop__heading">
                 Manufactured with the best materials
@@ -125,7 +141,7 @@
       <div class="image">
         <img src="./images/image-about-dark.jpg" alt="disign furniture" />
       </div>
-      <section class="about">
+      <section class="about" id="about">
         <h3 class="about__heading">About our furniture</h3>
         <p class="about__text">
           Our multifunctional collection blends design and function to suit your
@@ -144,7 +160,7 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#">Tomasz Procko</a>.
     </div>
     <script src="./js/main.js"></script>
   </body>

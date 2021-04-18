@@ -2,6 +2,7 @@
   const btnNav = document.querySelector(".header__button--hamburger");
   const btnClose = document.querySelector(".header__button--close");
   const nav = document.querySelector(".header__nav");
+  const overlay = document.querySelector(".overlay");
   const headerGroup = document.querySelector(".header__group");
   const slides = document.querySelectorAll(".carousel__item");
   const slideLeftBtn = document.querySelector(".carousel__button--left");
@@ -14,6 +15,7 @@
     headerGroup.style.transform = "translateY(-100%)";
     nav.style.opacity = "1";
     nav.style.transform = "translateY(0)";
+    overlay.style.display = "block";
   }
 
   function hideNav() {
@@ -21,6 +23,7 @@
     nav.style.transform = "translateY(-100%)";
     headerGroup.style.opacity = "1";
     headerGroup.style.transform = "translateY(0)";
+    overlay.style.display = "none";
   }
 
   function slideRight() {
