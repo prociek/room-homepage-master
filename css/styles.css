@@ -155,6 +155,24 @@ li {
     color: var(--White);
     margin-right: 3rem;
   }
+  .header .header__nav-item {
+    position: relative;
+  }
+  .header .header__nav-item a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -0.8rem;
+    left: calc(40% - 2rem);
+    width: 2rem;
+    height: 2px;
+    background-color: var(--White);
+    transition: opacity 300ms ease-out;
+    opacity: 0;
+  }
+  .header .header__nav-item a:hover::after {
+    opacity: 1;
+  }
 }
 
 /* SHOP SECTION */
@@ -207,8 +225,9 @@ li {
   text-transform: uppercase;
   letter-spacing: 8px;
 }
-.carousel .shop__button img {
+.carousel .shop__button svg {
   margin-left: 2rem;
+  fill: var(--Black);
 }
 /* carousel slide buttons */
 .carousel__button {
@@ -281,6 +300,10 @@ li {
     top: unset;
     bottom: 0;
     transform: translateX(200%);
+    padding: 2rem 2.4rem;
+  }
+  .carousel__button:hover {
+    background-color: var(--Primary-Very-Dark-Gray);
   }
   .carousel__button.carousel__button--left {
     transform: translateX(100%);
@@ -288,8 +311,11 @@ li {
   .carousel .carousel__shop {
     padding: 6rem;
   }
-  .carousel__button {
-    padding: 2rem 2.4rem;
+  .carousel .shop__button:hover {
+    color: var(--Primary-Dark-Gray);
+  }
+  .carousel .shop__button:hover svg {
+    fill: var(--Primary-Dark-Gray);
   }
 }
 

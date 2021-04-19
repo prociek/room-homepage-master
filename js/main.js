@@ -1,4 +1,5 @@
 (function () {
+  /* selecting elements */
   const btnNav = document.querySelector(".header__button--hamburger");
   const btnClose = document.querySelector(".header__button--close");
   const nav = document.querySelector(".header__nav");
@@ -8,24 +9,30 @@
   const slideLeftBtn = document.querySelector(".carousel__button--left");
   const slideRightBtn = document.querySelector(".carousel__button--right");
 
+  /* Index of current slide */
   let current = 0;
 
+  /* Helper function */
+  function toggleElement(el, show) {
+    el.style.opacity = show ? "1" : "0";
+    el.style.transform = show ? "translateY(0)" : "translateY(-100%)";
+  }
+
+  /* Show navbar */
   function showNav() {
-    headerGroup.style.opacity = "0";
-    headerGroup.style.transform = "translateY(-100%)";
-    nav.style.opacity = "1";
-    nav.style.transform = "translateY(0)";
+    toggleElement(headerGroup, false);
+    toggleElement(nav, true);
     overlay.style.display = "block";
   }
 
+  /* Hide Navbar */
   function hideNav() {
-    nav.style.opacity = "0";
-    nav.style.transform = "translateY(-100%)";
-    headerGroup.style.opacity = "1";
-    headerGroup.style.transform = "translateY(0)";
+    toggleElement(headerGroup, true);
+    toggleElement(nav, false);
     overlay.style.display = "none";
   }
 
+  /* Next slide */
   function slideRight() {
     current = (current + 1) % slides.length;
     Array.from(slides).forEach((slide) => {
@@ -33,6 +40,7 @@
     });
   }
 
+  /* Previous slide */
   function slideLeft() {
     current = (current - 1 + slides.length) % slides.length;
     Array.from(slides).forEach((slide) => {
