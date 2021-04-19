@@ -1,6 +1,7 @@
+/* FONT IMPORT */
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700&display=swap");
 
-/* Variables */
+/* VARIABLES */
 :root {
   --Primary-Dark-Gray: hsl(0, 0%, 63%);
   --Black: hsl(0, 0%, 0%);
@@ -8,7 +9,7 @@
   --Primary-Very-Dark-Gray: hsl(0, 0%, 27%);
 }
 
-/* General */
+/* GENERAL SETTINGS*/
 * {
   margin: 0;
   padding: 0;
@@ -29,6 +30,7 @@ li {
   list-style: none;
 }
 
+/* Media queries GENERAL SITTINGS*/
 @media screen and (min-width: 640px) {
   html {
     font-size: 75%;
@@ -45,7 +47,7 @@ li {
   }
 }
 
-/* HEADER */
+/* HEADER SECTION */
 .header {
   height: 11rem;
   width: 100%;
@@ -60,24 +62,27 @@ li {
   justify-content: center;
   align-items: center;
 }
+/* hamburger and close icons */
 .header .header__button {
   background-color: transparent;
   border: none;
   width: 1.5rem;
 }
-.header .header__button--close {
-  margin-left: 3rem;
-}
 .header .header__icon {
   width: 2rem;
   margin: 0 auto;
 }
+.header .header__button--close {
+  margin-left: 3rem;
+}
+/* logo */
 .header .header__logo-box {
   margin: 0 auto;
 }
 .header .header__logo-box .header__logo {
   height: 1.5rem;
 }
+/* navigation */
 .header .header__nav {
   width: 100%;
   height: 100%;
@@ -102,6 +107,8 @@ li {
   color: var(--Black);
   font-weight: 600;
 }
+
+/* OVERLAY */
 .overlay {
   position: fixed;
   top: 0;
@@ -113,6 +120,7 @@ li {
   display: none;
 }
 
+/* Media queries HEADER SECTION */
 @media screen and (min-width: 640px) {
   .header .haeder__nav-list {
     margin-left: 10rem;
@@ -123,14 +131,17 @@ li {
 }
 
 @media screen and (min-width: 1024px) {
+  /* hamburger and close buttons */
   .header__button {
     display: none;
   }
+  /* logo */
   .header__logo-box {
     position: absolute;
     left: 5rem;
     top: 5rem;
   }
+  /* navigation */
   .header .header__nav {
     opacity: 1;
     transform: translateY(0);
@@ -146,7 +157,7 @@ li {
   }
 }
 
-/* SHOP */
+/* SHOP SECTION */
 .shop {
   position: relative;
   width: 100vw;
@@ -158,17 +169,21 @@ li {
   height: 100%;
   overflow-x: hidden;
 }
+/* slide */
 .carousel__item {
   flex: 0 0 100%;
   display: flex;
   flex-direction: column;
   transition: all 500ms ease-out;
+  overflow: hidden;
 }
+/* picture */
 .carousel .carousel__img img {
   height: 45vh;
   min-width: 100%;
   object-fit: cover;
 }
+/* content */
 .carousel .carousel__shop {
   display: flex;
   flex: 1 1 100%;
@@ -195,6 +210,7 @@ li {
 .carousel .shop__button img {
   margin-left: 2rem;
 }
+/* carousel slide buttons */
 .carousel__button {
   position: absolute;
   right: 0;
@@ -211,6 +227,7 @@ li {
   transform: translate(-100%, -100%);
 }
 
+/* Media queries SHOP SECTION */
 @media screen and (max-width: 365px) and (max-height: 660px) {
   .carousel .carousel__shop {
     padding: 1.5rem;
@@ -234,12 +251,14 @@ li {
 }
 
 @media screen and (min-width: 1024px) {
+  /* changing layout */
   main {
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
   }
+  /* carousel slide */
   .shop {
     height: 66.6666vh;
   }
@@ -291,6 +310,7 @@ li {
   letter-spacing: 5px;
 }
 
+/* Media queries ABOUT SECTION */
 @media screen and (max-width: 365px) and (max-height: 660px) {
   .about {
     padding: 3rem 1.5rem;
@@ -316,7 +336,12 @@ li {
   }
 }
 
-/* FOOTER */
+/* IMAGES SECTIONS */
+.image img {
+  width: 100%;
+}
+
+/* FOOTER SECTION */
 .attribution {
   margin: 2rem;
   font-size: 1rem;
@@ -326,10 +351,7 @@ li {
   color: hsl(228, 45%, 44%);
 }
 
-.image img {
-  width: 100%;
-}
-
+/* Media queries IMAGES and FOOTER */
 @media screen and (min-width: 1024px) {
   .image {
     width: 30%;

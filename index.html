@@ -10,13 +10,17 @@
       href="./images/favicon-32x32.png"
     />
     <title>Frontend Mentor | Room homepage</title>
+    <!-- CSS  -->
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <!-- OVERLAY -->
     <div class="overlay"></div>
+    <!-- HEADER SECTION -->
     <header class="header">
       <div class="header__group">
+        <!-- HAMBURGER ICON -->
         <button class="header__button header__button--hamburger">
           <img
             class="header__icon"
@@ -24,11 +28,13 @@
             alt="open nav icon"
           />
         </button>
+        <!-- LOGO -->
         <div class="header__logo-box">
           <img src="./images/logo.svg" alt="logo room" class="header__logo" />
         </div>
       </div>
       <nav class="header__nav">
+        <!-- CLOSE ICON -->
         <button class="header__button header__button--close">
           <img
             class="header__icon"
@@ -36,6 +42,7 @@
             alt="close nav icon"
           />
         </button>
+        <!-- NAVIGATION -->
         <ul class="haeder__nav-list">
           <li class="header__nav-item"><a href="#home">home</a></li>
           <li class="header__nav-item"><a href="#shop">shop</a></li>
@@ -45,9 +52,13 @@
       </nav>
     </header>
     <main>
+      <!-- SHOP SECTION -->
       <section class="shop">
+        <!-- CAROUSEL -->
         <ul class="carousel">
+          <!-- CAROUSEL SLIDE -->
           <li class="carousel__item">
+            <!-- SLIDE PICTURE -->
             <picture class="carousel__img">
               <source
                 srcset="images/desktop-image-hero-1.jpg"
@@ -58,6 +69,7 @@
                 alt="disign table and chairs"
               />
             </picture>
+            <!-- SLIDE CONTENT -->
             <article class="carousel__shop">
               <h2 class="shop__heading">
                 Discover innovative ways to decorate
@@ -74,7 +86,9 @@
               /></a>
             </article>
           </li>
+          <!-- CAROUSEL SLIDE -->
           <li class="carousel__item">
+            <!-- SLIDE PICTURE -->
             <picture class="carousel__img">
               <source
                 srcset="./images/desktop-image-hero-2.jpg"
@@ -85,6 +99,7 @@
                 alt="design colorful chairs"
               />
             </picture>
+            <!-- SLIDE CONTENT -->
             <article class="carousel__shop">
               <h2 class="shop__heading">
                 We are available all across the globe
@@ -101,7 +116,9 @@
               /></a>
             </article>
           </li>
+          <!-- CAROUSEL SLIDE -->
           <li class="carousel__item">
+            <!-- SLIDE PICTURE -->
             <picture class="carousel__img">
               <source
                 srcset="./images/desktop-image-hero-3.jpg"
@@ -112,6 +129,7 @@
                 alt="deisign black chair"
               />
             </picture>
+            <!-- SLIDE CONTENT -->
             <article class="carousel__shop">
               <h2 class="shop__heading">
                 Manufactured with the best materials
@@ -138,9 +156,11 @@
           <img src="./images/icon-angle-right.svg" alt="icon angle right" />
         </button>
       </section>
+      <!-- IMAGE SECTION -->
       <div class="image">
         <img src="./images/image-about-dark.jpg" alt="disign furniture" />
       </div>
+      <!-- ABOUT SECTION -->
       <section class="about" id="about">
         <h3 class="about__heading">About our furniture</h3>
         <p class="about__text">
@@ -152,16 +172,19 @@
           dream space.
         </p>
       </section>
+      <!-- IMAGE SECTION -->
       <div class="image image--right">
         <img src="./images/image-about-light.jpg" alt="disign chair" />
       </div>
     </main>
-    <div class="attribution">
+    <!-- FOOTER -->
+    <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Tomasz Procko</a>.
-    </div>
+    </footer>
+    <!-- Script -->
     <script src="./js/main.js"></script>
   </body>
 </html>
