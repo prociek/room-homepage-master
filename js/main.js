@@ -8,9 +8,10 @@
   const slides = document.querySelectorAll(".carousel__item");
   const slideLeftBtn = document.querySelector(".carousel__button--left");
   const slideRightBtn = document.querySelector(".carousel__button--right");
-
-  /* Index of current slide */
-  let current = 0;
+  /* Slider variables */
+  const SLIDE_TIME = 6000;
+  let currentSlide = 0;
+  let interval;
 
   /* Helper function */
   function toggleElement(el, show) {
@@ -34,23 +35,54 @@
 
   /* Next slide */
   function slideRight() {
-    current = (current + 1) % slides.length;
+    currentSlide = (currentSlide + 1) % slides.length;
     Array.from(slides).forEach((slide) => {
-      slide.style.transform = `translateX(-${current * 100}%)`;
+      slide.style.transform = `translateX(-${currentSlide * 100}%)`;
     });
+  }
+  function handleSlideRight() {
+    clearInterval(interval);
+    slideRight();
+    interval = setInterval(() => {
+      slideRight();
+    }, SLIDE_TIME);
   }
 
   /* Previous slide */
   function slideLeft() {
-    current = (current - 1 + slides.length) % slides.length;
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
     Array.from(slides).forEach((slide) => {
-      slide.style.transform = `translateX(-${current * 100}%)`;
+      slide.style.transform = `translateX(-${currentSlide * 100}%)`;
     });
   }
+  function handleSlideLeft() {
+    clearInterval(interval);
+    slideLeft();
+    interval = setInterval(() => {
+      slideRight();
+    }, SLIDE_TIME);
+  }
 
-  // Event listeners
+  // EVENT LISTENERS
+  /* Open Navbar */
   btnNav.addEventListener("click", showNav);
+  /* Close Navbar */
   btnClose.addEventListener("click", hideNav);
-  slideRightBtn.addEventListener("click", slideRight);
-  slideLeftBtn.addEventListener("click", slideLeft);
+  /* Slide Right */
+  slideRightBtn.addEventListener("click", handleSlideRight);
+  /* Slide Left */
+  slideLeftBtn.addEventListener("click", handleSlideLeft);
+  /* Slide with keyboard */
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Right" || e.key === "ArrowRight") {
+      handleSlideRight();
+    } else if (e.key === "Left" || e.key === "ArrowLeft") {
+      handleSlideLeft();
+    }
+  });
+
+  /* Initialize slider */
+  interval = setInterval(() => {
+    slideRight();
+  }, SLIDE_TIME);
 })();
