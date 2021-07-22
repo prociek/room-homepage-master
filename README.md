@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./my-solution.jpg)
+![room homepage](./my-solution.png)
 
 ### Links
 
